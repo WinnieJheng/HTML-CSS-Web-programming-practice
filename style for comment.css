@@ -1,11 +1,20 @@
 @charset "UTF-8";
 
+:root {
+  --green: #00FF00;
+  --white: #FFFFFF;
+  --black: #000000;
+  --pink: #FFB5B5;
+  --gray: #212121;
+  --yellow:#fbf9cc;
+
+}
+
 /*視窗底色*/
 body{
-  background-color:#fbf9cc;
+  background: var(--bg);
   background-image: url(images/bg-stripe01.png);
   background-repeat: repeat-x;
-
 }
 /*連結顏色*/
 a:link{
@@ -70,3 +79,37 @@ table.comment{
 }
 
 /**/
+
+/*切換明亮模式與黑暗模式*/
+.btn3 {
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
+.btn3 {
+  position: absolute;
+  top: 400px;
+  left: 1300px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: none;
+  color: var(--btnFontColor);
+  background-color: var(--btnBg);
+}
+
+.btn3:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.light-theme {
+  --bg: var(--yellow);
+  --btnBg: var(--black);
+  --btnFontColor: var(--white);
+}
+
+.dark-theme {
+  --bg: var(--gray);
+  --btnBg: var(--white);
+  --btnFontColor: var(--black);
+}
